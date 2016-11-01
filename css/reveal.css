@@ -55,6 +55,10 @@ p {
 	text-align: center;
 	}
 
+.title-page p {
+	text-align:center;
+}
+
 html:-webkit-full-screen-ancestor {
   background-color: inherit; }
 
