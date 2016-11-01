@@ -120,6 +120,191 @@
 					
 				</section>
 				
+				<!--SLIDE 7-->
+				<section>
+					<p>
+					<h2>Opening and Starting a Project</h2>
+					<ul>
+					<li>Use your own data or try using this sample data extract available <a href="https://drive.google.com/file/d/0Bz9LVQAqjIjLb3c0VFJ0M0JLT0E/view?usp=sharing">here</a>. Click on <strong>Browse</strong> and select your data.</li>
+					<li>Click <strong>Next</strong></li>
+					</ul></p>
+					<img src="imgs/image01.png" width="50%" height="50%" align="middle"/>
+					
+					
+				</section>
+				
+				<!--SLIDE 8-->
+				<section>
+					<p>
+					<h2>Opening and Starting a Project</h2>
+					<ul>
+					<li>Preview the data. Ensure encoding is correct.</li>
+					<li>Check that OpenRefine recognizes character (comma, tab, etc.) being used to separate values in table.</li>
+					</ul></p>
+					<img src="imgs/image08.png" width="40%" height="40%" align="middle"/>
+					
+					
+				</section>
+				
+				<!--SLIDE 9-->
+				<section>
+					<p>
+					<h2>Navigating the Data Window</h2>
+					<ul>
+					<li>Use drop-down arrows on column names to access tools.</li>
+					<li>Try functions like <strong>Text Filter</strong> to select certain row values</li>
+					</ul></p>
+					<img src="imgs/image02.png" width="35%" height="35%" align="left"/>
+					<img src="imgs/image04.png" width="40%" height="40%" align="right"/>
+					
+					
+				</section>
+				
+				<!--SLIDE 10-->
+				<section>
+					<p>
+					<h2>Creating a Text Facet to Clean/Edit Cell Values</h2>
+					<ul>
+					<li>Under <strong>Facet</strong> option of the column to be edited, select <strong>Text Facet</strong>.</li>
+					<li>View universe of cell values for that column. See a list of values by clicking on <strong>Choices</strong></li>
+					</ul></p>
+					<img src="imgs/image11.png" width="35%" height="35%" align="left"/>
+					<img src="imgs/image32.png" width="40%" height="40%" align="right"/>
+					
+				</section>
+				
+				<!--SLIDE 11-->
+				<section>
+					<p>
+					<h2>Creating a Text Facet to Clean/Edit Cell Values</h2>
+					<ul>
+					<li>Edit columns values in-line by hovering over a value and clicking on <strong>Edit</strong>.</li>
+					<li>Changes made will apply to all instances of that value in the datasheet.</li>
+					</ul></p>
+					<img src="imgs/image12.png" width="50%" height="50%" align="middle"/>
+					
+				</section>
+				
+				<!--SLIDE 12-->
+				<section>
+					<p>
+					<h2>Creating a Text Facet to Clean/Edit Cell Values</h2>
+					<ul>
+					<li>Use <strong>Cluster</strong> for more powerful cleaning of data entry errors and non-standardization problems such as capitalization, extra whitespace.</li>
+					</ul></p>
+					<img src="imgs/image15.png" width="40%" height="40%" align="middle"/>
+					
+				</section>
+				
+				<!--SLIDE 13-->
+				<section>
+					<p>
+					<h2>Creating a Text Facet to Clean/Edit Cell Values</h2>
+					<ul>
+					<li>Change <strong>Method</strong> and <strong>Keying Function</strong> to look for more groupings to merge and re-cluster.</li>
+					<li>Enter replacement values in <strong>New Cell Value</strong> field.</li>
+					</ul></p>
+					<img src="imgs/image15.png" width="40%" height="40%" align="middle"/>
+					
+				</section>
+				
+				<!--SLIDE 14-->
+				<section>
+					<p>
+					<h2>Splitting Columns</h2>
+					<ul>
+					<li>Select <strong>Edit Column >> Split into several columns</strong>.</li>
+					<li>Name the new column and choose a method for splitting original column (by separator, by whitespace, by character length).</li>
+					</ul></p>
+					<img src="imgs/image13.png" width="35%" height="35%" align="left"/>
+					<img src="imgs/image09.png" width="40%" height="40%" align="right"/>
+					
+				</section>
+				
+				
+				<!--SLIDE 14-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: String Evaluations</h2>
+					<ul>
+					<li>Select <strong>Edit Column >> Add column based on this column</strong>.</li>
+					<li>Name the new column and enter an Expression that will transform the value of the original column cell into something new.</li>
+					</ul></p>
+					<img src="imgs/image14.png" width="35%" height="35%" align="middle"/>
+					
+				</section>
+				
+				
+				<!--SLIDE 14-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: String Evaluations</h2>
+					<ul>
+					<li>Example: <pre>endsWith(value, “Agent”)</pre><br/>Examines the first parameter (here, value or the cell’s value to see if it ends with the string “Agent.” If it does, returns true, otherwise false.</li>
+					</ul></p>
+				
+				</section>
+				
+				<!--SLIDE 15-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: Geocoding</h2>
+					<ul>
+					<li>Under the column Street_address, select <strong>Edit Column >> Add Column by Fetching URLs</strong>.</li>
+					<li>Name the new column and enter in the Expression box:<br/><pre>"http://maps.google.com/maps/api/geocode/json?address=" + escape(value, "url")</pre></li>
+					</ul></p>
+					<img src="imgs/image18.png" width="35%" height="35%" align="middle"/>
+				
+				</section>
+				
+				
+				<!--SLIDE 16-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: Geocoding</h2>
+					<ul>
+					<li>Or copy and paste expression from this <a href="https://github.com/OpenRefine/OpenRefine/wiki/Geocoding">tutorial</a></li>
+					</ul></p>
+					<img src="imgs/image18.png" width="35%" height="35%" align="middle"/>
+					
+				</section>
+				
+				<!--SLIDE 17-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: Geocoding</h2>
+					<ul>
+					<li>Once geocoding is complete, you’ll see a new column with a JSON response from Google containing coordinates for that street address.</li>
+					<li>Under the new JSON response column select <strong>Edit column >> Add column based on this column</strong>.</li>
+					</ul></p>
+					<img src="imgs/image19.png" width="25%" height="25%" align="middle"/>
+					
+				</section>
+				
+				
+				<!--SLIDE 18-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions: Geocoding</h2>
+					<ul>
+					<li>In expression box, enter: <br/><pre>with(value.parseJson().results[0].geometry.location, pair, pair.lat +", " + pair.lng)</pre></li>
+					</ul></p>
+					<img src="imgs/image19.png" width="35%" height="35%" align="middle"/>
+					
+				</section>
+				
+				<!--SLIDE 18-->
+				<section>
+					<p>
+					<h2>Advanced Column Expressions BONUS: Jython</h2>
+					<ul>
+					<li>Like Python? Try setting language to Jython and entering whole Python script blocks in your expression field.</li>
+					</ul></p>
+					<img src="imgs/image119.png" width="40%" height="40%" align="middle"/>
+					
+				</section>
+				
+				
 				<!-- CONCLUSION SLIDE -->
 				<section>
 					<h2>Thank you! Questions?</h2><br/>
